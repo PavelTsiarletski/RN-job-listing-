@@ -1,6 +1,6 @@
-# Архитектура приложения - Диаграммы
+# Application Architecture - Diagrams
 
-## 1. Архитектура системы (Flowchart)
+## 1. System Architecture (Flowchart)
 
 ```mermaid
 flowchart TD
@@ -67,7 +67,7 @@ flowchart TD
     class D,E,F,V navigation
 ```
 
-## 2. Пользовательские сценарии (Sequence Diagram)
+## 2. User Scenarios (Sequence Diagram)
 
 ```mermaid
 sequenceDiagram
@@ -140,28 +140,28 @@ sequenceDiagram
     JobsDetails->>User: Display job details
 ```
 
-## Описание компонентов
+## Component Description
 
-### 🎯 Основные экраны:
-- **JobsListScreen** - список вакансий с пагинацией и избранным
-- **JobDetailsScreen** - детали вакансии с возможностью добавления в избранное
+### 🎯 Main Screens:
+- **JobsListScreen** - job listings with pagination and favorites functionality
+- **JobDetailsScreen** - job details with ability to add to favorites
 
-### 🗄️ Управление состоянием:
-- **Redux Store** - централизованное хранилище состояния
-- **FavouritesSlice** - управление избранными вакансиями
-- **RTK Query APIs** - кэширование и управление API запросами
+### 🗄️ State Management:
+- **Redux Store** - centralized state storage
+- **FavouritesSlice** - favorite jobs management
+- **RTK Query APIs** - caching and API request management
 
-### 💾 Хранение данных:
-- **SQLite Database** - локальное хранение избранного
-- **Coople API** - внешний источник данных вакансий
+### 💾 Data Storage:
+- **SQLite Database** - local favorites storage
+- **Coople API** - external job data source
 
-### 🔗 Навигация:
-- **React Navigation** - маршрутизация между экранами
-- **Deep Linking** - прямые ссылки на конкретные вакансии
+### 🔗 Navigation:
+- **React Navigation** - routing between screens
+- **Deep Linking** - direct links to specific jobs
 
-### 🎨 Цветовая схема:
-- 🔵 Экраны (UI компоненты)
-- 🟣 Redux (управление состоянием) 
-- 🟢 API (внешние данные)
-- 🟠 База данных (локальные данные)
-- 🔴 Навигация (маршрутизация) 
+### 🎨 Color Scheme:
+- 🔵 Screens (UI components)
+- 🟣 Redux (state management) 
+- 🟢 API (external data)
+- 🟠 Database (local data)
+- 🔴 Navigation (routing) 
