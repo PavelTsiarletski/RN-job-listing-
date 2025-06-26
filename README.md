@@ -42,7 +42,18 @@ MyJobsApp is a comprehensive job listing application built with React Native and
    cd new
    ```
 
-2. **Install dependencies**
+2. **Setup environment variables**
+   ```bash
+   cp .env.example .env
+   ```
+   
+   The `.env` file contains API configuration:
+   - `REACT_APP_API_BASE_URL` - Base API URL
+   - `REACT_APP_COOPLE_JOBS_API` - Coople Jobs API endpoint
+   
+   > **⚠️ Important**: You must rename `.env.example` to `.env` for the app to work properly.
+
+3. **Install dependencies**
    ```bash
    npm install
    # or
@@ -228,9 +239,14 @@ CREATE TABLE IF NOT EXISTS favourites (
 ```
 
 ### Environment Setup
-No additional environment configuration required. The app uses:
+Environment variables are configured via `.env` file:
+- Copy `.env.example` to `.env` before starting the app
 - Coople API: `https://www.coople.com/ch/resources/api/work-assignments/public-jobs/`
 - SQLite database: Created automatically on first run
+
+**Required environment variables:**
+- `REACT_APP_API_BASE_URL` - Base API URL for external services
+- `REACT_APP_COOPLE_JOBS_API` - Coople Jobs API endpoint URL
 
 ## 🔧 Configuration
 
